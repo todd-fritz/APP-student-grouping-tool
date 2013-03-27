@@ -1,0 +1,33 @@
+﻿
+<!DOCTYPE html>
+<html>
+	<head>
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+        <title>Student Grouping Tool - Error Page</title>
+		<link rel="stylesheet" href="~/Content/vendor/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/Content/css/core.css" />
+	</head>
+<body>
+		<div id="group-selection">
+            <div class="inbloom-header row-fluid">
+                <img id="inbloom-logo" src="~/Content/img/inbloom-logo.png" alt="inBloom Logo" />                       
+                <div class="header-title">Group Selection</div>    
+                <div style="float:right; margin-top:-0.5em">     
+                    <span id="help-btn">help</span>
+                </div>
+            </div>
+        </div>
+
+@{
+    ViewBag.Title = "PermissionError";
+}
+    <div class="row-fluid">
+        <div class="span1"></div>
+        <div class="span10">
+            <h2>Permission Error</h2>
+            You don't have permission to perform this action.<br />
+            If you think you should be able to, contact your systems administrator.
+        </div>
+    </div>
+</body>
+</html>

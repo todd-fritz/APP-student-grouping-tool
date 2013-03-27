@@ -1,0 +1,34 @@
+﻿
+<!DOCTYPE html>
+<html>
+	<head>
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+        <title>Student Grouping Tool - Error Page</title>
+		<link rel="stylesheet" href="~/Content/vendor/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/Content/css/core.css" />
+	</head>
+<body>
+		<div id="group-selection">
+            <div class="inbloom-header row-fluid">
+                <img id="inbloom-logo" src="~/Content/img/inbloom-logo.png" alt="inBloom Logo" />                       
+                <div class="header-title">Group Selection</div>    
+                <div style="float:right; margin-top:-0.5em">     
+                    <span id="help-btn">help</span>
+                </div>
+            </div>
+        </div>
+
+@{
+    ViewBag.Title = "Timeout";
+}
+    <div class="row-fluid">
+        <div class="span1"></div>
+        <div class="span10">
+            <h2>Timeout<br /></h2>
+            The communications took so long that they timed out.<br />
+            Try whatever you did again. If it times out a couple of times in a row, there may be a network error. You'll have to contact your systems administrator for help.<br />
+        </div>
+    </div>
+</body>
+</html>
+

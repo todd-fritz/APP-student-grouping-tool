@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>WebApiContrib.Formatting.JavaScriptSerializer</id>
+    <version>0.9.4.0</version>
+    <title>WebApiContrib.Formatting.JavaScriptSerializer</title>
+    <authors>WebApiContrib Contributors</authors>
+    <owners>WebApiContrib Contributors</owners>
+    <licenseUrl>https://raw.github.com/WebApiContrib/WebApiContrib.Formatting.JavaScriptSerializer/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/WebApiContrib/WebApiContrib.Formatting.JavaScriptSerializer</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Description</description>
+    <releaseNotes />
+    <copyright>Copyright © WebApiContrib 2012 - 2013</copyright>
+    <language />
+    <tags>webapi webapicontrib javascriptserializer</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="4.0.20710.0" />
+    </dependencies>
+    <references>
+      <reference file="WebApiContrib.Formatting.JavaScriptSerializer.dll" />
+    </references>
+  </metadata>
+</package>
