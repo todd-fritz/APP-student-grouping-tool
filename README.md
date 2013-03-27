@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 inBloom-student-grouping-tool
 =========================
 What is it?
 -----------
 
-The Student Data aquisition calculator is a .Net and AJAX based tool that allows inBloom users to perform criteria based searches on student data.
+The Student grouping tool is a .Net and AJAX based tool that allows teachers to arrange students in to groups using the inBloom datastore as a backend.
 
 The Latest Version
 ------------------
@@ -25,9 +24,3 @@ Licensing
 ---------
 
 Please see the file called LICENSE.
-=======
-group
-=====
-
-inBloom Student Grouping Tool
->>>>>>> 77d7a31f1a421b234c2fda7a8ea6ba858a830753
