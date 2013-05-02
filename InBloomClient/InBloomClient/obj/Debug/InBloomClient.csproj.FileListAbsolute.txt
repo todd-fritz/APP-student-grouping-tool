@@ -10,3 +10,15 @@ C:\Users\dnelson\Source\Repos\inbloom_group\InBloomClient\InBloomClient\obj\Debu
 C:\Users\dnelson\Source\Repos\inbloom_group\InBloomClient\InBloomClient\obj\Debug\InBloomClient.pdb
 C:\Users\dnelson\Source\Repos\inbloom_group\InBloomClient\InBloomClient\bin\Debug\Elmah.dll
 C:\Users\dnelson\Source\Repos\inbloom_group\InBloomClient\InBloomClient\bin\Debug\WebApiContrib.Formatting.JavaScriptSerializer.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\InBloomClient\InBloomClient\bin\Debug\InBloomClient.dll.config
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\InBloomClient\InBloomClient\bin\Debug\InBloomClient.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\InBloomClient\InBloomClient\bin\Debug\InBloomClient.pdb
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\InBloomClient\InBloomClient\bin\Debug\Elmah.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\InBloomClient\InBloomClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\InBloomClient\InBloomClient\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\InBloomClient\InBloomClient\bin\Debug\WebApiContrib.Formatting.JavaScriptSerializer.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\InBloomClient\InBloomClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\InBloomClient\InBloomClient\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\InBloomClient\InBloomClient\obj\Debug\InBloomClient.csprojResolveAssemblyReference.cache
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\InBloomClient\InBloomClient\obj\Debug\InBloomClient.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\InBloomClient\InBloomClient\obj\Debug\InBloomClient.pdb

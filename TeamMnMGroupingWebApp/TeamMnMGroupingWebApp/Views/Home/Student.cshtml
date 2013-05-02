@@ -21,7 +21,7 @@
             </p>
             <p>
                 title: 
-                @foreach(SlcClient.Entities.Assessment a in sdo.assessments){
+                @foreach(InBloomClient.Entities.Assessment a in sdo.assessments){
                     @a.assessmentTitle       
                 }
             </p>
@@ -31,3 +31,6 @@
 
 @Html.ActionLink("create cohorts", "CreateCohort", "Home");
 @Html.ActionLink("abandon session", "AbandonSession", "Home");
+
+<!-- Load analytics scripts -->
+<script src="~/Content/vendor/analytics/analytics.js"> </script> 

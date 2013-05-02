@@ -27,3 +27,33 @@ C:\Users\dnelson\Source\Repos\inbloom_group\TeamMnMGroupingWebApp\TeamMnMGroupin
 C:\Users\dnelson\Source\Repos\inbloom_group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\obj\Debug\TeamMnMGroupingWebApp.csprojResolveAssemblyReference.cache
 C:\Users\dnelson\Source\Repos\inbloom_group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\obj\Debug\TeamMnMGroupingWebApp.dll
 C:\Users\dnelson\Source\Repos\inbloom_group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\obj\Debug\TeamMnMGroupingWebApp.pdb
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\TeamMnMGroupingWebApp.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\TeamMnMGroupingWebApp.pdb
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\Elmah.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\InBloomClient.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\Newtonsoft.Json.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.Helpers.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.Http.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.Http.WebHost.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.Mvc.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.Razor.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.WebPages.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Net.Http.Formatting.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\InBloomClient.pdb
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\Newtonsoft.Json.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.Helpers.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.Http.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.Http.WebHost.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.Mvc.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.Razor.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.WebPages.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\bin\System.Net.Http.Formatting.xml
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\obj\Debug\TeamMnMGroupingWebApp.csprojResolveAssemblyReference.cache
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\obj\Debug\TeamMnMGroupingWebApp.dll
+C:\Users\dnelson\Documents\Visual Studio 2012\Projects\group\TeamMnMGroupingWebApp\TeamMnMGroupingWebApp\obj\Debug\TeamMnMGroupingWebApp.pdb
