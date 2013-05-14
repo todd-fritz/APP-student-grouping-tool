@@ -861,7 +861,18 @@ namespace TeamMnMGroupingWebApp.Controllers
         {
             //Construct a master object to for display purpose
             var data = new GroupingDisplayObject();
-            data.cohorts = cohorts.Result;
+            
+            //Remove cohorts that were not created by the grouping app by checking for the presence of a custom field.
+            var valid_cohorts = new List<CohortDisplayObject>(cohorts.Result);
+            foreach (CohortDisplayObject cohort in cohorts.Result)
+            {
+                if (cohort.custom == null)
+                {
+                    valid_cohorts.Remove(cohort);
+                }
+            }
+            data.cohorts = valid_cohorts;
+
 
             IEnumerable<StudentDisplayObject> studentDisplayObjects = students.Result;
             List<StudentDisplayObject> listOfStudents = studentDisplayObjects.ToList();
