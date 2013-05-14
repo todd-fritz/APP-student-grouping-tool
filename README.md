@@ -20,6 +20,8 @@ Installation
 
 Please see the file AdministratorGuide, in the ./doc directory.
 
+Also you'll need to rename Web.config.example to web.config (and add your inBloom client secret and client ids) to have a functioning build.
+
 Licensing
 ---------
 
