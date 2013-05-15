@@ -1078,7 +1078,7 @@ student_grouping.groupWidget = function(groupModel){
     this.generatePrintableHtml = function () {
         var groupData = me.groupModel.groupData;
         var div = $("<div style='page-break-after:always'>");
-        $(div).append("<h2>Name: " + groupData.groupName + "</h2>");
+        $(div).append("<h2>Name: " + groupModel.groupName + "</h2>");
         $(div).append("<p>Description:<i>" +
             groupData.cohortDescription !== null ? groupData.cohortDescription : '' + "</i></p>");
 
