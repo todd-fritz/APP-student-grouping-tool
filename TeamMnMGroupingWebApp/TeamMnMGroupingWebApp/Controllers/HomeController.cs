@@ -306,13 +306,17 @@ namespace TeamMnMGroupingWebApp.Controllers
                 var accessToken = Session["access_token"];
                 if (accessToken != null)
                 {   
-                    var cohort = CohortHelper.GetGroupById(accessToken.ToString(), id);                    
-                    StringBuilder sb = new StringBuilder();
-                    sb.Append("Name: " + cohort.cohortIdentifier + "\r\n\r\n");
-                    sb.Append("Description: " + cohort.cohortDescription + "\r\n\r\n");                    
-
+                    var cohort = CohortHelper.GetGroupById(accessToken.ToString(), id);
                     var cs = new CohortService(accessToken.ToString());
                     var group = CohortHelper.GetCohortDisplayObject(cs, cohort);
+                    var groupName = group.Result.custom.groupName;
+
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("Name: " + groupName + "\r\n\r\n");
+                    sb.Append("Description: " + cohort.cohortDescription + "\r\n\r\n");                    
+
+                    //var cs = new CohortService(accessToken.ToString());
+                    //var group = CohortHelper.GetCohortDisplayObject(cs, cohort);
 
                     if (group.Result.students.Count() > 0)
                     {
@@ -333,7 +337,7 @@ namespace TeamMnMGroupingWebApp.Controllers
                     
                     return File(Encoding.UTF8.GetBytes(sb.ToString()),
                          "text/plain",
-                          string.Format("{0}.txt", cohort.cohortIdentifier));
+                          string.Format("{0}.txt", groupName));
                 }
                 return null;
             }
