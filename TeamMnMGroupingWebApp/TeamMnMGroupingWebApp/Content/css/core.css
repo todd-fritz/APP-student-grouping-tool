@@ -40,7 +40,7 @@
 .inbloom-footer {
     background: #000000;
     min-width:1280px;
-    position:absolute;
+    position:fixed;
     bottom:0;
 }
 
