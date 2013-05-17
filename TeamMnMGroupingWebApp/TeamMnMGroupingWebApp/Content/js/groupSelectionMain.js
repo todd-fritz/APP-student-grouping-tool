@@ -54,7 +54,7 @@ student_grouping.groupSelectionMain = function () {
         $.ajax({
             type: 'GET',
             url: 'Group',
-            timeout: 30000,
+            timeout: 300000,
             success: function (data) {
                 if (data.sections === undefined) {
                     window.location = "/Home";
@@ -128,7 +128,7 @@ student_grouping.groupSelectionMain = function () {
             url: 'Logout',
             success: function (result) {
                 if (result.logout) {
-                    window.location = "/Home";
+                    window.location = "https://portal.sandbox.inbloom.org/portal/c/logout";
                 } else {
                     window.location = "Error";
                 }
