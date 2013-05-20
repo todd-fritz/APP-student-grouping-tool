@@ -837,6 +837,11 @@ student_grouping.groupWidget = function(groupModel){
     this.createGroupErrorHandler = function (result) {
         var msg = "Group could not be created. Please try again later or contact your system administrator.";
 
+        if (result.objectActionResult.message === '{"type":"Forbidden","message":"Access DENIED: Insufficient Privileges","code":403}') {
+            msg = "You don't have permission to perform this action." +
+            " Contact your systems administrator.";
+        }
+
         var groupCreatedSuccessfully = result.objectActionResult.isSuccess;
         if (groupCreatedSuccessfully) {
             me.updateId(result.objectActionResult.objectId);

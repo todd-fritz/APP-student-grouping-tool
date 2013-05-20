@@ -1,3 +1,4 @@
 # Secrets not to be published #
 ###############################
 *.config
+TeamMnMGroupingWebApp/TeamMnMGroupingWebApp/App_Data/error*
