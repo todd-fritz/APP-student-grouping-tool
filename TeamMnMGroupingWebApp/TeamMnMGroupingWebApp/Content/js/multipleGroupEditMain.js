@@ -129,8 +129,8 @@ student_grouping.multipleGroupEditMain = function () {
         var topbarHeight = $(me.topbarControls).height();
         var headerHeight = $(me.headerClass).outerHeight();
         var footerHeight = $(me.footerClass).outerHeight();
-        $(me.mainContentClass).height((windowHeight - topbarHeight - headerHeight - footerHeight - 3) + 'px');
-        var studentCtrlHeight = $("#student-controls").height();
+        $(me.mainContentClass).height((windowHeight - topbarHeight - headerHeight - footerHeight - 21) + 'px');
+        var studentCtrlHeight = $("#student-controls").height()-1;
         var studentCtrlMargin = $("#student-controls").css('margin-bottom');
         var studentListMargin = $("#studentListDiv").css('margin-top');
         $("#studentListDiv").height();
