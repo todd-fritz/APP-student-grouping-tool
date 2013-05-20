@@ -394,6 +394,7 @@ student_grouping.groupListWidget = function () {
 
             if (result.completedSuccessfully) {
                 numSuccessfulSaves++;
+//                numSuccessfulSaves += numResults;
                 groupWidget.dirty = false;
 
                 $(successDiv).append("<li>" + result.objectActionResult.objectName + "</li>");
@@ -432,10 +433,19 @@ student_grouping.groupListWidget = function () {
             }
         }
 
-        var successDiv = $("<div class='well label-success save-all-msg'><div>The following groups were saved successfully: </div>").append(successDiv);
+        if ((numResults - numSuccessfulSaves) <= 0) {
+            successDiv = $("<div class='well label-success save-all-msg'><div>The following groups were saved successfully: </div>").append(successDiv);
+        }
 
         if ((numResults - numSuccessfulSaves) > 0) {
-            var failDiv = $("<div class='well label-important save-all-msg'><div>Failed to save the following groups, please try again later:</div>").append(failDiv);
+
+            if (result.objectActionResult.message === '{"type":"Forbidden","message":"Access DENIED: Insufficient Privileges","code":403}') {
+                failDiv = $("<div class='well label-important save-all-msg'><div>You don't have permission to perform this action." +
+                " Contact your systems administrator.</div></div>");
+            }
+            else {
+                failDiv = $("<div class='well label-important save-all-msg'><div>Failed to save the following groups, please try again later:</div>").append(failDiv);
+            }
         }
 
         $(me.saveAllGroupsContentElem).empty();
