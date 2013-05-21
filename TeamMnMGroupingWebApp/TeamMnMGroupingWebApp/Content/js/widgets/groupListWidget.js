@@ -439,9 +439,14 @@ student_grouping.groupListWidget = function () {
 
         if ((numResults - numSuccessfulSaves) > 0) {
 
-            if (result.objectActionResult.message === '{"type":"Forbidden","message":"Access DENIED: Insufficient Privileges","code":403}') {
-                failDiv = $("<div class='well label-important save-all-msg'><div>You don't have permission to perform this action." +
-                " Contact your systems administrator.</div></div>");
+            if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
+                failDiv = $("<div class='well label-important save-all-msg'><div>The active user account doesn't have the correct permissions " +
+                    "to take this action. If you feel you should be able to perform this action, contact your System Administrator and " +
+                    "request 'WRITE' access privileges.</div></div>");
+
+                // You don't have permission to perform this action." + " Contact your systems administrator.
+                // The active user account doesn't have the correct permissions to take this action. If you feel you should be able to perform this action,
+                // contact you System Administrator and request 'WRITE' access privileges.
             }
             else {
                 failDiv = $("<div class='well label-important save-all-msg'><div>Failed to save the following groups, please try again later:</div>").append(failDiv);

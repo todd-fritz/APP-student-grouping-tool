@@ -837,9 +837,8 @@ student_grouping.groupWidget = function(groupModel){
     this.createGroupErrorHandler = function (result) {
         var msg = "Group could not be created. Please try again later or contact your system administrator.";
 
-        if (result.objectActionResult.message === '{"type":"Forbidden","message":"Access DENIED: Insufficient Privileges","code":403}') {
-            msg = "You don't have permission to perform this action." +
-            " Contact your systems administrator.";
+        if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
+            msg = "You don't have permission to perform this action. Contact your systems administrator.";
         }
 
         var groupCreatedSuccessfully = result.objectActionResult.isSuccess;
@@ -931,6 +930,10 @@ student_grouping.groupWidget = function(groupModel){
     this.updateGroupErrorHandler = function (result) {
         var msg = 'Group could not be updated. Please try again later or contact your system administrator.';
 
+        if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
+            msg = "You don't have permission to perform this action. Contact your systems administrator.";
+        }
+
         var groupUpdatedSuccessfully = result.objectActionResult.isSuccess;
         var failToCreateAssociations = result.failToCreateAssociations;
         var failToDeleteAssociations = result.failToDeleteAssociations;
@@ -1004,11 +1007,18 @@ student_grouping.groupWidget = function(groupModel){
      *
      */
     this.deleteGroupErrorHandler = function (result) {
+
+        var msg = 'Group could not be deleted. Please try again later or contact your system administrator.';
+
+        if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
+            msg = "You don't have permission to perform this action. Contact your systems administrator.";
+        }
+
         me.toggleGroupContainerProcessingState(false);
         // Let user know the delete was not successful
         utils.uiUtils.showTooltip(
             $(me.groupContainerId).find(me.groupNameLblClass),
-            'Group could not be deleted. Please try again later or contact your system administrator.',
+            msg,
             'top',
             'manual',
             3000);

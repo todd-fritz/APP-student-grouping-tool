@@ -604,7 +604,15 @@ namespace TeamMnMGroupingWebApp.Controllers
                 var response = await cs.DeleteById(id);
 
                 if (response.StatusCode == HttpStatusCode.NoContent)
+                {
                     result.completedSuccessfully = true;
+                }
+                else if (response.StatusCode == HttpStatusCode.Forbidden) {
+
+                    result.objectActionResult = new ActionResponseResult();
+                    result.objectActionResult.status = HttpStatusCode.Forbidden;
+                    result.objectActionResult.message = "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}";
+                }
 
                 return result;
             }
@@ -757,10 +765,11 @@ namespace TeamMnMGroupingWebApp.Controllers
                 var accessToken = Session["access_token"];
                 if (accessToken != null)
                 {
-                    var cs = new CohortService(Session["access_token"].ToString());                                 
+//                    var cs = new CohortService(Session["access_token"].ToString());
+                    var cs = new CohortService(accessToken.ToString());                                 
 
                     var cohortResult = await DeleteCohort(cs, id);
-                    //remove cohort from cache after an update
+                    // remove cohort from cache after an update
                     HttpContext.Cache.Remove(id);
 
                     // delete the group's directory from the FTP server
@@ -791,6 +800,9 @@ namespace TeamMnMGroupingWebApp.Controllers
             {
                 var cohortsToUpdate = from cao in list where cao.cohort.id != null select cao;
                 var cohortsToCreate = from cao in list where cao.cohort.id == null select cao;
+
+//                var cohortsToUpdate = from cao in list where cao.cohort.cohortIdentifier != null select cao;
+//                var cohortsToCreate = from cao in list where cao.cohort.cohortIdentifier == null select cao;
 
                 var updateCohorts = UpdateMultipleGroups(cohortsToUpdate);
                 var createCohorts = CreateMultipleGroups(cohortsToCreate);
