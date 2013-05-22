@@ -198,11 +198,18 @@ student_grouping.groupListItemWidget = function (groupModel) {
     /**
      * Callback handler for unsuccessful delete
      */
-    this.deleteGroupErrorHandler = function () {
+    this.deleteGroupErrorHandler = function (result) {
+
+        var msg = 'Group could not be deleted. Please try again later or contact your system administrator.';
+
+        if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
+            msg = "You don't have permission to perform this action. Contact your systems administrator.";
+        }
+
         // Let user know the delete was not successful
         utils.uiUtils.showTooltip(
             $(me.containerId).find(me.groupDeleteIconClass),
-            'Group could not be deleted. Please try again later or contact your system administrator.',
+            msg,
             'top',
             'manual',
             3000);

@@ -457,7 +457,7 @@ student_grouping.groupDetailsWidget = function () {
                 msg += ' The attachment could not be uploaded';
             }
         } else if (result.objectActionResult.status === 403) {
-            msg = 'You do not have the sufficient priviledges to makes changes to the cohort.';
+            msg = 'You do not have the sufficient privileges to makes changes to the cohort.';
         }
 
         // Let user know the save was not successful

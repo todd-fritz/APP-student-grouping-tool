@@ -235,7 +235,7 @@ student_grouping.groupModel = function (groupData) {
         } else {
             method = 'UpdateGroup';
         }
-
+        
         $.ajax({
             type: 'POST',
             url: method,
@@ -254,6 +254,7 @@ student_grouping.groupModel = function (groupData) {
             },
             error: function (result) {
                 // should implement exception handling
+
             }
         });
     }
