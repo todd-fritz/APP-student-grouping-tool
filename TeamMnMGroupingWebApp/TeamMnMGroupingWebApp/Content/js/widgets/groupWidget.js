@@ -838,7 +838,7 @@ student_grouping.groupWidget = function(groupModel){
         var msg = "Group could not be created. Please try again later or contact your system administrator.";
 
         if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
-            msg = "You don't have permission to perform this action. Contact your systems administrator.";
+            msg = "You do not have permission to perform this action. Contact your systems administrator.";
         }
 
         var groupCreatedSuccessfully = result.objectActionResult.isSuccess;
@@ -863,7 +863,7 @@ student_grouping.groupWidget = function(groupModel){
             msg,
             'top',
             'manual',
-            3000);
+            5000);
     }
     
     /**
@@ -931,7 +931,7 @@ student_grouping.groupWidget = function(groupModel){
         var msg = 'Group could not be updated. Please try again later or contact your system administrator.';
 
         if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
-            msg = "You don't have permission to perform this action. Contact your systems administrator.";
+            msg = "You do not have permission to perform this action. Contact your systems administrator.";
         }
 
         var groupUpdatedSuccessfully = result.objectActionResult.isSuccess;
@@ -957,7 +957,7 @@ student_grouping.groupWidget = function(groupModel){
             msg,
             'top',
             'manual',
-            3000);
+            5000);
     }
 
     this.saveComplete = function () {
@@ -1011,7 +1011,7 @@ student_grouping.groupWidget = function(groupModel){
         var msg = 'Group could not be deleted. Please try again later or contact your system administrator.';
 
         if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
-            msg = "You don't have permission to perform this action. Contact your systems administrator.";
+            msg = "You do not have permission to perform this action. Contact your systems administrator.";
         }
 
         me.toggleGroupContainerProcessingState(false);
@@ -1021,7 +1021,7 @@ student_grouping.groupWidget = function(groupModel){
             msg,
             'top',
             'manual',
-            3000);
+            5000);
     }
 
     /**

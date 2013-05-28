@@ -82,7 +82,7 @@ namespace TeamMnMGroupingWebApp.Helper
         /// <param name="cs"></param>
         /// <param name="cohortId">the cohort id to get custom for</param>
         /// <returns></returns>
-        public static async Task<string> GetCohortCustomByCohortId(CohortService cs, string cohortId)
+        private static async Task<string> GetCohortCustomByCohortId(CohortService cs, string cohortId)
         {
             try
             {

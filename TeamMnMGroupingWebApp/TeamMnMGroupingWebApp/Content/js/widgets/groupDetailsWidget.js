@@ -457,7 +457,7 @@ student_grouping.groupDetailsWidget = function () {
                 msg += ' The attachment could not be uploaded';
             }
         } else if (result.objectActionResult.status === 403) {
-            msg = 'You do not have the sufficient privileges to makes changes to the cohort.';
+            msg = 'You do not have sufficient privileges to makes changes to a group.';
         }
 
         // Let user know the save was not successful
@@ -592,7 +592,8 @@ student_grouping.groupDetailsWidget = function () {
     }
 
     /**
-     *
+     * Indicates the state of the group. If passed true, 'save' button is made visible.
+     * If passed false, 'save' button is hidden.
      */
     this.toggleDirty = function (dirty) {
         me.dirty = dirty;

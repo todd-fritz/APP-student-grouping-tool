@@ -575,6 +575,8 @@ namespace TeamMnMGroupingWebApp.Controllers
                     cohort.educationOrgId = userSession.edOrgId;
                 else
                     cohort.educationOrgId = CURRENT_ED_ORG_ID;
+                
+                cohort = await GetGroupById(cohort.id);
 
                 var response = await cs.Update(cohort);
 
@@ -642,7 +644,7 @@ namespace TeamMnMGroupingWebApp.Controllers
                     //3) update cohort custom entity
                     var cohortCustom = CohortActionHelper.UpdateCustom(obj, cs);
 
-                    cohortResult.objectActionResult.objectName = obj.custom.groupName;
+//                    cohortResult.customActionResult.objectName = obj.custom.groupName;
 
                     // if there is no lesson plan, then delete the group's directory from the FTP server
                     if (obj.custom.lessonPlan == null)
@@ -712,7 +714,7 @@ namespace TeamMnMGroupingWebApp.Controllers
                         await ProcessASuccessfulCohortCreate(obj, cs, cohortResult, staffId);
                     }
 
-                    cohortResult.objectActionResult.objectName = obj.custom.groupName;
+                    cohortResult.customActionResult.objectName = obj.custom.groupName;
                     return cohortResult;
                 }
                 else

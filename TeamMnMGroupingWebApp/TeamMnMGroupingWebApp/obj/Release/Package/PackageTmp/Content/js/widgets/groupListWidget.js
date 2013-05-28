@@ -379,6 +379,7 @@ student_grouping.groupListWidget = function () {
         for (var i = 0; i < numResults; i++) {
             var result = results[i];
             var groupWidget = groupsToSave[i];
+            var groupName = groupsToSave[i].groupModel.groupName;
 
             // assign id to newly created groups and notify others to add this new group
             if (groupWidget.groupModel.isNewGroup()) {
@@ -394,17 +395,21 @@ student_grouping.groupListWidget = function () {
 
             if (result.completedSuccessfully) {
                 numSuccessfulSaves++;
+//                numSuccessfulSaves += numResults;
                 groupWidget.dirty = false;
-
-                $(successDiv).append("<li>" + result.objectActionResult.objectName + "</li>");
+                
+//                $(successDiv).append("<li>" + result.objectActionResult.objectName + "</li>");
+                $(successDiv).append("<li>" + groupName + "</li>");
             } else {
                 var groupListItem = $("<li>");
                 // check if group was successfully saved
                 var groupObjResult = result.objectActionResult;
                 if (groupObjResult.isSuccess) {
-                    $(groupListItem).append("<div>" + groupObjResult.objectName + " was saved successfully </div>");
+//                    $(groupListItem).append("<div>" + groupObjResult.objectName + " was saved successfully </div>");
+                    $(groupListItem).append("<div>" + groupName + " was saved successfully </div>");
                 } else {
-                    $(groupListItem).append("<div>" + groupObjResult.objectName + " was not saved successfully </div>");
+//                    $(groupListItem).append("<div>" + groupObjResult.objectName + " was not saved successfully </div>");
+                    $(groupListItem).append("<div>" + groupName + " was not saved successfully </div>");
                 }
 
                 var failToCreate = result.failToCreateAssociations;
@@ -432,10 +437,21 @@ student_grouping.groupListWidget = function () {
             }
         }
 
-        var successDiv = $("<div class='well label-success save-all-msg'><div>The following groups were saved successfully: </div>").append(successDiv);
+        if ((numResults - numSuccessfulSaves) <= 0) {
+            successDiv = $("<div class='well label-success save-all-msg'><div>The following groups were saved successfully: </div>").append(successDiv);
+        }
 
         if ((numResults - numSuccessfulSaves) > 0) {
-            var failDiv = $("<div class='well label-important save-all-msg'><div>Failed to save the following groups, please try again later:</div>").append(failDiv);
+
+            if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
+                failDiv = $("<div class='well label-important save-all-msg'><div>The active user account does npt have the correct permissions " +
+                    "to take this action. If you feel you should be able to perform this action, contact your System Administrator and " +
+                    "request 'WRITE' access privileges.</div></div>");
+
+            }
+            else {
+                failDiv = $("<div class='well label-important save-all-msg'><div>Failed to save the following groups, please try again later:</div>").append(failDiv);
+            }
         }
 
         $(me.saveAllGroupsContentElem).empty();

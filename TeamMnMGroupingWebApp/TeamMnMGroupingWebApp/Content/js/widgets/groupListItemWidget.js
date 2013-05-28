@@ -203,7 +203,7 @@ student_grouping.groupListItemWidget = function (groupModel) {
         var msg = 'Group could not be deleted. Please try again later or contact your system administrator.';
 
         if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
-            msg = "You don't have permission to perform this action. Contact your systems administrator.";
+            msg = "You do not have permission to perform this action. Contact your systems administrator.";
         }
 
         // Let user know the delete was not successful
@@ -212,7 +212,7 @@ student_grouping.groupListItemWidget = function (groupModel) {
             msg,
             'top',
             'manual',
-            3000);
+            5000);
         me.toggleGroupContainerProcessingState(false);
     }
 

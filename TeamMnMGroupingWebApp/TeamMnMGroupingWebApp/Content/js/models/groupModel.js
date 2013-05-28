@@ -269,6 +269,8 @@ student_grouping.groupModel = function (groupData) {
         
         // if negative, then it is a new group so it doesn't have an id.
         // server expects null for new groups
+//        var id = me.isNewGroup() ? null : me.groupData.id;
+
         var id;
         var cohortId;
 
@@ -289,6 +291,7 @@ student_grouping.groupModel = function (groupData) {
             cohort: {
                 id: id,
                 cohortDescription: me.groupData.cohortDescription,
+//                cohortIdentifier: me.groupData.cohortIdentifier
                 cohortIdentifier: cohortId
             },
             custom: {

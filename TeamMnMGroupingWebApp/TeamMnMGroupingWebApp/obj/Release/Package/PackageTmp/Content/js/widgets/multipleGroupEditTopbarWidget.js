@@ -101,7 +101,7 @@ student_grouping.multipleGroupEditTopbarWidget = function () {
         // add newly created (saved to server) group to dropdown list
         me.pubSub.subscribe('add-to-existing-groups', function (groupModel) {
             $(me.findGroupDropdownElem).
-    			append("<option value='" + groupModel.getId() + "'>" + groupModel.groupData.cohortIdentifier + "</option>");
+    			append("<option value='" + groupModel.getId() + "'>" + groupModel.groupName + "</option>");
             me.groupModels[groupModel.getId()] = groupModel;
         });
 
@@ -109,7 +109,7 @@ student_grouping.multipleGroupEditTopbarWidget = function () {
         me.pubSub.subscribe('group-changed', function (originalId, groupModel) {
             var optionElem = $(me.findGroupDropdownElem).find("option[value='" + originalId + "']");
             $(optionElem).attr('value', originalId);
-            $(optionElem).html(groupModel.groupData.cohortIdentifier);
+            $(optionElem).html(groupModel.groupName);
         });
     }
 

@@ -837,6 +837,10 @@ student_grouping.groupWidget = function(groupModel){
     this.createGroupErrorHandler = function (result) {
         var msg = "Group could not be created. Please try again later or contact your system administrator.";
 
+        if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
+            msg = "You do not have permission to perform this action. Contact your systems administrator.";
+        }
+
         var groupCreatedSuccessfully = result.objectActionResult.isSuccess;
         if (groupCreatedSuccessfully) {
             me.updateId(result.objectActionResult.objectId);
@@ -859,7 +863,7 @@ student_grouping.groupWidget = function(groupModel){
             msg,
             'top',
             'manual',
-            3000);
+            5000);
     }
     
     /**
@@ -926,6 +930,10 @@ student_grouping.groupWidget = function(groupModel){
     this.updateGroupErrorHandler = function (result) {
         var msg = 'Group could not be updated. Please try again later or contact your system administrator.';
 
+        if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
+            msg = "You do not have permission to perform this action. Contact your systems administrator.";
+        }
+
         var groupUpdatedSuccessfully = result.objectActionResult.isSuccess;
         var failToCreateAssociations = result.failToCreateAssociations;
         var failToDeleteAssociations = result.failToDeleteAssociations;
@@ -949,7 +957,7 @@ student_grouping.groupWidget = function(groupModel){
             msg,
             'top',
             'manual',
-            3000);
+            5000);
     }
 
     this.saveComplete = function () {
@@ -999,14 +1007,21 @@ student_grouping.groupWidget = function(groupModel){
      *
      */
     this.deleteGroupErrorHandler = function (result) {
+
+        var msg = 'Group could not be deleted. Please try again later or contact your system administrator.';
+
+        if (result.objectActionResult.message === "{\"type\":\"Forbidden\",\"message\":\"Access DENIED: Insufficient Privileges\",\"code\":403}") {
+            msg = "You do not have permission to perform this action. Contact your systems administrator.";
+        }
+
         me.toggleGroupContainerProcessingState(false);
         // Let user know the delete was not successful
         utils.uiUtils.showTooltip(
             $(me.groupContainerId).find(me.groupNameLblClass),
-            'Group could not be deleted. Please try again later or contact your system administrator.',
+            msg,
             'top',
             'manual',
-            3000);
+            5000);
     }
 
     /**
@@ -1078,7 +1093,7 @@ student_grouping.groupWidget = function(groupModel){
     this.generatePrintableHtml = function () {
         var groupData = me.groupModel.groupData;
         var div = $("<div style='page-break-after:always'>");
-        $(div).append("<h2>Name: " + groupData.groupName + "</h2>");
+        $(div).append("<h2>Name: " + groupModel.groupName + "</h2>");
         $(div).append("<p>Description:<i>" +
             groupData.cohortDescription !== null ? groupData.cohortDescription : '' + "</i></p>");
 
