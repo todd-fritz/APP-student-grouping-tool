@@ -79,7 +79,11 @@ namespace TeamMnMGroupingWebApp.Helper
                 newStudent.id = student.id;
                 newStudent.name = string.Format("{0} {1}", student.name.firstName, student.name.lastSurName);
                 newStudent.sections = from s in sections select s.id;
-                newStudent.disabilities = from d in student.disabilities select FilterHelper.GetEnumDescription(d.disability);
+                if (student.disabilities != null)
+                    newStudent.disabilities = from d in student.disabilities select FilterHelper.GetEnumDescription(d.disability);
+                else
+                    newStudent.disabilities = null;
+                
 
                 //sometime there's no learning style data
                 if (student.learningStyles != null)
@@ -94,7 +98,12 @@ namespace TeamMnMGroupingWebApp.Helper
                 newStudent.race = student.race;
                 newStudent.schoolFoodServicesEligiblity = FilterHelper.GetEnumDescription(student.schoolFoodServicesEligiblity);
                 newStudent.section504Disablities = student.section504Disablities;
-                newStudent.studentCharacteristics = from sc in student.studentCharacteristics select FilterHelper.GetEnumDescription(sc.characteristic);
+
+                if (student.studentCharacteristics != null)
+                    newStudent.studentCharacteristics = from sc in student.studentCharacteristics select FilterHelper.GetEnumDescription(sc.characteristic);
+                else
+                    newStudent.studentCharacteristics = null;
+
                 newStudent.languages = student.languages;
                 newStudent.homeLanguages = student.homeLanguages;
                 newStudent.learningStyles = student.learningStyles;
@@ -103,9 +112,23 @@ namespace TeamMnMGroupingWebApp.Helper
                 newStudent.hispanicLatinoEthnicity = student.hispanicLatinoEthnicity;
                 newStudent.oldEthnicity = FilterHelper.GetEnumDescription(student.oldEthnicity);
                 newStudent.limitedEnglishProficiency = FilterHelper.GetEnumDescription(student.limitedEnglishProficiency);
-                newStudent.otherName = from son in student.otherName select string.Format("{0} {1}", son.firstName, son.lastSurName);
-                newStudent.studentCharacteristics = from sc in student.studentCharacteristics select FilterHelper.GetEnumDescription(sc.characteristic);
-                newStudent.studentIndicators = from si in student.studentIndicators select si.indicator;
+
+                if (student.otherName != null)
+                    newStudent.otherName = from son in student.otherName select string.Format("{0} {1}", son.firstName, son.lastSurName);
+                else
+                    newStudent.otherName = null;
+
+
+                if (student.studentCharacteristics != null)
+                    newStudent.studentCharacteristics = from sc in student.studentCharacteristics select FilterHelper.GetEnumDescription(sc.characteristic);
+                else
+                    newStudent.studentCharacteristics = null;
+
+                if (student.studentIndicators != null)
+                    newStudent.studentIndicators = from si in student.studentIndicators select si.indicator;
+                else
+                    newStudent.studentIndicators = null;
+
                 newStudent.telephones = student.telephones;
                 newStudent.sex = FilterHelper.GetEnumDescription(student.sex);
                 newStudent.displacementStatus = student.displacementStatus;
