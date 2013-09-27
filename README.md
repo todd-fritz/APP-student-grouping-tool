@@ -25,4 +25,4 @@ Also you'll need to rename Web.config.example to web.config (and add your inBloo
 Licensing
 ---------
 
-Please see the file called LICENSE.
+The inBloom Student Grouping tool is licensed under the Apache license. Please see the file called LICENSE.
