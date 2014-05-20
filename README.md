@@ -1,14 +1,8 @@
-inBloom-student-grouping-tool
+student-grouping-tool
 =========================
-What is it?
------------
 
-The Student grouping tool is a .Net and AJAX based tool that allows teachers to arrange students in to groups using the inBloom datastore as a backend.
+The Student grouping tool is a .Net and AJAX based tool that allows teachers to arrange students in to groups using the Secure Data Service as a backend.
 
-The Latest Version
-------------------
-
-Details of the latest version can be found on the inBloom github repository at https://github.com/inbloom
 
 Documentation
 -------------
