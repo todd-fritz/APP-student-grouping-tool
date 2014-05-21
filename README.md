@@ -1,7 +1,7 @@
 student-grouping-tool
 =========================
 
-The Student grouping tool is a .Net and AJAX based tool that allows teachers to arrange students in to groups using the Secure Data Service as a backend.
+The Student grouping tool is a .Net and AJAX based tool that allows teachers to arrange students in to groups using the ESDS as a backend.
 
 
 Documentation
@@ -19,4 +19,4 @@ Also you'll need to rename Web.config.example to web.config (and add your inBloo
 Licensing
 ---------
 
-The inBloom Student Grouping tool is licensed under the Apache license. Please see the file called LICENSE.
+The Student Grouping tool is licensed under the Apache license. Please see the file called LICENSE.
